@@ -1,0 +1,8 @@
+package ch01.ex11;
+
+/**
+ * Created by mary-mogreen.
+ */
+public interface I1 {
+    void f();
+}
