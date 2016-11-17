@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.io.File;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 /**
  * Created by mary-mogreen.
@@ -15,6 +16,8 @@ public class FilesWithExtensionTest {
     public void testListWithExtension() {
         String[] files = FilesWithExtension.listWithExtension(new File("./test/testDir"), "md");
         String[] expected = {"test.md", "test2.md"};
+
+        assertTrue(files.length == expected.length);
 
         for (int i = 0; i < files.length; i++) {
             assertEquals(expected[i], files[i]);

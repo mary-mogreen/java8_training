@@ -20,6 +20,6 @@ public class StreamUtils {
     }
 
     public static void main(String[] args) {
-        isFinite(Stream.generate(() -> ""));
+        // isFinite(Stream.generate(() -> ""));
     }
 }

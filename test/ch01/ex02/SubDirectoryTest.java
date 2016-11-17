@@ -3,10 +3,10 @@ package ch01.ex02;
 import org.junit.Test;
 
 import java.io.File;
-import java.util.List;
 
-import static junit.framework.TestCase.assertEquals;
-import static junit.framework.TestCase.fail;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+
 
 /**
  * Created by mary-mogreen.
