@@ -1,7 +1,5 @@
 package ch01.ex02;
 
-import com.sun.istack.internal.NotNull;
-
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
