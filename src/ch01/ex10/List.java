@@ -52,6 +52,8 @@ public interface List<E> {
     static <T> List<T> singletonList(T o) {throw new AssertionError();}
 
     static <T> List<T> nCopies(int n, T o) {throw new AssertionError();}
+    
+    // sort method は 引数なしはstatic? 引数ありは default?
 
 
 }
