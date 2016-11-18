@@ -7,7 +7,7 @@ import org.junit.Test;
  */
 public class Collection2Test {
 
-    @Test
+    @Test // TODO テストになってない
     public void testForEachIf() {
         ArrayList2<String> list = new ArrayList2<>();
         list.add("****");
