@@ -46,10 +46,11 @@ public class Impl {
         // ========  ======== ======== =========
         // abstract  override override override
         // default   override override default
-        // static    override default  override?
-        // super     super    super    super
+        // static    override default  実装不要だが、呼べない
+        // Super     Super    Super    Super
         // ========  ======== ======== =========
 
+        // 
         new Impl10().f();
         new Impl11().f();
         new Impl12().f();
