@@ -7,6 +7,7 @@ import org.junit.Test;
  */
 public class ExceptionUncheckTest {
 
+    // TODO testになってないので、もうちょいテストっぽく
     @Test
     public void testUncheck() {
         new Thread(ExceptionUncheck.uncheck(() -> {
