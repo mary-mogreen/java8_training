@@ -11,7 +11,10 @@ import java.util.stream.Stream;
  * Created by mary-mogreen.
  */
 public class StreamUtils {
-
+    
+    // TODO 3つの形式で
+    // Optional<T>	reduce(BinaryOperator<T> accumulator)
+    // <U> U	reduce(U identity, BiFunction<U,? super T,U> accumulator, BinaryOperator<U> combiner)
     public static <T> ArrayList<T> flatArrayList(Stream<ArrayList<T>> stream) {
         Objects.requireNonNull(stream, "stream must not be null.");
         return stream.reduce(new ArrayList<T>(), (a1, a2) -> { a1.addAll(a2); return a1; });
