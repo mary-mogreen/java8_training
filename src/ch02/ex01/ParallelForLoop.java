@@ -33,10 +33,12 @@ public class ParallelForLoop {
         for (WordCounter th: threads) {
             try {
                 th.join();
+                count += th.count;
+                System.out.println(count);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            count += th.count;
+            
         }
 
         return count;
