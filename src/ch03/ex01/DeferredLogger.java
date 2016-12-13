@@ -1,4 +1,5 @@
-import java.util.function.Predicate;
+package ch03.ex01;
+
 import java.util.function.Supplier;
 import java.util.logging.Level;
 import java.util.logging.Logger;

@@ -1,3 +1,5 @@
+package ch03.ex02;
+
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
