@@ -8,7 +8,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * Created by mary-mogreen.
  */
 public class MaxKey {
-    private static final long THREADS = 100L;
+
+    private static final long THRESHOLD = 100L;
     private static final long NUM_OF_ENTRY = 1000000L;
     public static void main(String[] args) {
         ConcurrentHashMap<String, Long> map = new ConcurrentHashMap<>();
@@ -17,7 +18,7 @@ public class MaxKey {
             map.put(key, l);
         }
 
-        Map.Entry<String, Long> entry = map.reduceEntries(THREADS, (e1, e2) -> {
+        Map.Entry<String, Long> entry = map.reduceEntries(THRESHOLD, (e1, e2) -> {
            return e1.getValue() > e2.getValue() ? e1: e2;
         });
 
@@ -35,7 +36,7 @@ public class MaxKey {
         Objects.requireNonNull(map, "map is null");
         if (map.isEmpty())
             throw new IllegalArgumentException("map is empty.");
-        return map.reduceEntries(THREADS, (e1, e2) -> {
+        return map.reduceEntries(THRESHOLD, (e1, e2) -> {
             return e1.getValue() > e2.getValue() ? e1: e2;
         });
     }
