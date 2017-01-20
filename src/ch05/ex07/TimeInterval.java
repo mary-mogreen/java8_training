@@ -9,8 +9,8 @@ import java.util.Objects;
  */
 public class TimeInterval {
 
-    final LocalDateTime start;
-    final LocalDateTime end;
+    final LocalDateTime start; // この時刻を含む
+    final LocalDateTime end; // この時刻を含む
 
     public TimeInterval(LocalDateTime start, LocalDateTime end) {
         Objects.requireNonNull(start, "start is not null.");
@@ -23,12 +23,15 @@ public class TimeInterval {
         this.end = end;
     }
 
+    /**
+     * 1時から2時と2時から3時は重なっているとみなします。
+     */
     public boolean isOverrapping(TimeInterval o) {
         Objects.requireNonNull(o, "the other TimeInterval is not null.");
 
-        if (start.isAfter(o.end))
+        if (start.isAfter(o.end) || end.isBefore(o.start))
             return false;
 
-        return end.isBefore(o.start) ? false: true;
+        return true;
     }
 }
