@@ -30,7 +30,7 @@ public class LongAccumulatorUsageTest {
         assertEquals(max, LongAccumulatorUsage.max(null));
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testMax_empty() {
         assertEquals(Long.MIN_VALUE, LongAccumulatorUsage.max(new ArrayList<>()));
     }
@@ -45,7 +45,7 @@ public class LongAccumulatorUsageTest {
         assertEquals(min, LongAccumulatorUsage.min(null));
     }
 
-    @Test
+    @Test(expected = IllegalArgumentException.class)
     public void testMin_empty() {
         assertEquals(Long.MAX_VALUE, LongAccumulatorUsage.min(new ArrayList<>()));
     }
