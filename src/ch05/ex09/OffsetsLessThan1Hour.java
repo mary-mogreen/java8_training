@@ -13,7 +13,7 @@ public class OffsetsLessThan1Hour {
                 id -> {
                     ZoneOffset offset = now.atZone(ZoneId.of(id)).getOffset();
                     int second = offset.getTotalSeconds();
-                    if (second > -60 * 60 && second < 60 * 60)
+                    if (second % 3600 != 0)
                         System.out.println(now.atZone(ZoneId.of(id)));
                 }
         );
