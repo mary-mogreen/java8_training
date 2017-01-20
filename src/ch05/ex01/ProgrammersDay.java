@@ -9,10 +9,10 @@ import java.time.Period;
  */
 public class ProgrammersDay {
     public static void main(String[] args) {
-        System.out.println("programmer's day: " + programmersDay(2014, 1, 1));
+        System.out.println("programmer's day: " + programmersDay(2014));
     }
 
-    public static LocalDate programmersDay(int year, int month, int dayOfMonth) {
-        return LocalDate.of(year, month, dayOfMonth).plus(Period.ofDays(255));
+    public static LocalDate programmersDay(int year) {
+        return LocalDate.of(year, 1, 1).plus(Period.ofDays(255));
     }
 }
