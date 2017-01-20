@@ -13,14 +13,14 @@ public class ProgrammersDayTest {
     @Test
     public void programmersDay_leapYear() {
         LocalDate expected = LocalDate.of(2016, 1, 1).plusDays(255);
-        assertEquals(expected, ProgrammersDay.programmersDay(2016, 1, 1));
+        assertEquals(expected, ProgrammersDay.programmersDay(2016));
         System.out.println("leap year: " + expected);
     }
 
     @Test
     public void programmersDay_notLeapYear() {
         LocalDate expected = LocalDate.of(2015, 1, 1).plusDays(255);
-        assertEquals(expected, ProgrammersDay.programmersDay(2015, 1, 1));
+        assertEquals(expected, ProgrammersDay.programmersDay(2015));
         System.out.println("leap year: " + expected);
     }
 
