@@ -14,7 +14,7 @@ public class Fibonacci {
         System.out.println("answer: " + fibonacci[n-1].f00);
     }
 
-    static class Matrix {
+    public static class Matrix {
         public static F multiply(F f1, F f2) {
             long f00 = f1.f00 * f2.f00 + f1.f01 * f2.f10;
             long f01 = f1.f00 * f2.f01 + f1.f01 * f2.f11;
@@ -24,7 +24,7 @@ public class Fibonacci {
         }
     }
 
-    static class F {
+    public static class F {
         long f00;
         long f01;
         long f10;
